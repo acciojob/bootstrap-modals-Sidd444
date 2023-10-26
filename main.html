@@ -8,30 +8,36 @@
 </head>
 
 <body>
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal" id="open-modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" id="newton-modal">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New Modal</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	<button type="button" class="btn btn-primary" id="open-modal">
+    Open Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="newton-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">New Modal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo ante ac orci porta, vel iaculis libero tincidunt.</p>
+            </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="modal-body">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi impedit saepe debitis, repellendus provident modi, exercitationem et tempora cumque quos corrupti quidem voluptate dolorum recusandae minima quo quis commodi maxime sunt nisi! Nam, quos alias accusantium suscipit ipsum expedita quae natus, a aliquam molestiae, incidunt cumque. Optio explicabo obcaecati consectetur.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
-	<!-- the entire body must be written by student -->
+</div>
+	
     <script type="text/javascript" src="./script.js">
+		document.getElementById('open-modal').addEventListener('click', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('newton-modal'));
+        myModal.show();
+    });
 </script>
 
 </body>
